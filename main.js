@@ -1,4 +1,5 @@
 const refs = {
+    titleLvl: document.getElementById('top'),
     content: document.getElementById('content'),
     hardLvl: document.getElementById('hardLvl'),
     control: document.getElementsByName('lvl'),
@@ -83,7 +84,8 @@ function showInp (inp, result){
 
 function nextTask (e){
     if(refs.nextBTN.value === 'Почати'){
-        refs.nextBTN.classList.toggle('active')
+        refs.nextBTN.classList.toggle('active');
+        refs.titleLvl.classList.toggle('hidden');
         let currLvl = wathLvl(refs.control);
         let randomInt = randomInteger(1,10);
         let res = currLvl*randomInt;
@@ -99,6 +101,7 @@ function nextTask (e){
         e.preventDefault();
     }else {
         refs.nextBTN.classList.toggle('active')
+        refs.titleLvl.classList.toggle('hidden');
         refs.content.classList.remove('good', 'bed');
         if(refs.nextBTN.classList.length>0){
             refs.nextBTN.value = 'Спочатку'

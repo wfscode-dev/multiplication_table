@@ -21,6 +21,10 @@ body{
     text-align: center;
 }
 
+.hidden{
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     #wrapper{
         width: 100%;
@@ -103,7 +107,7 @@ body{
 }
 
 input{
-    width: 100px;
+    width: 150px;
     margin-left: 5px;
     border-radius: 5px;
     font-size: 60px;
@@ -129,6 +133,7 @@ input{
 }
 
 .form_radio_btn label {
+    background: aquamarine;
     display: inline-block;
     cursor: pointer;
     padding: 0px 15px;
@@ -139,7 +144,7 @@ input{
 }
 
 .form_radio_btn input[type=radio]:checked + label {
-    background: #ffe0a6;
+    background: cyan;
 }
 
 .form_radio_btn label:hover {

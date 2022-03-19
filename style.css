@@ -1,0 +1,63 @@
+.content {
+    max-width: 600px;
+    height: 700px;
+    font-family: SansSerif;
+    font-size: 30px;
+    background: bisque;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.sub_title{
+    font-weight: bold;
+}
+
+#hardLvl{
+    display: flex;
+    justify-content: center;
+}
+
+#nextBTN{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: center;
+    background-color: aquamarine;
+    font-size: 40px;
+}
+
+#nextBTN:hover{
+    background-color: cyan;
+}
+
+
+.good {
+    background: green;
+    color: white;!important;
+}
+
+.bed {
+    background: red;
+}
+
+.inputDiv {
+
+}
+
+input{
+    width: 100px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 60px;
+}
+
+.inputDiv{
+    font-size: 60px;
+}
+
+.restext{
+    font-size: 20px;
+}

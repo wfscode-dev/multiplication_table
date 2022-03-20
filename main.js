@@ -4,14 +4,19 @@ const refs = {
     hardLvl: document.getElementById('hardLvl'),
     control: document.getElementsByName('lvl'),
     divBtn: document.getElementById('divBtn'),
+    divTwoBtn: document.getElementById('divTwoBtn'),
     nextBTN: document.getElementById('nextBTN'),
+    repBTN: document.getElementById('repBTN'),
     area: document.getElementById('area'),
     answerTask: document.getElementsByClassName('answerTask'),
     results: document.getElementById('results'),
+    slider: document.getElementById('slider'),
+    sliderBTNDiv: document.getElementById('sliderBtnDiv'),
 
 };
 
     refs.nextBTN.addEventListener('click', nextTask);
+    refs.repBTN.addEventListener('click', showTable)
 
 
 
@@ -80,12 +85,28 @@ function showInp (inp, result){
     }
 }
 
+function showTable(e) {
+    //let currLvl = wathLvl(refs.control);
+    refs.slider.classList.toggle('hidden')
+    refs.sliderBTNDiv.classList.toggle('hidden')
+    refs.titleLvl.classList.toggle('hidden');
+    refs.divBtn.classList.toggle('hidden')
+    refs.repBTN.classList.toggle('open')
+    if(refs.repBTN.classList.length>0){
+        refs.repBTN.value = 'Закрити'
+    }else {
+        refs.repBTN.value = 'Повторити'
+    }
+    init();
+}
+
 
 
 function nextTask (e){
     if(refs.nextBTN.value === 'Почати'){
         refs.nextBTN.classList.toggle('active');
         refs.titleLvl.classList.toggle('hidden');
+        refs.divTwoBtn.classList.toggle('hidden');
         let currLvl = wathLvl(refs.control);
         let randomInt = randomInteger(1,10);
         let res = currLvl*randomInt;
@@ -102,6 +123,7 @@ function nextTask (e){
     }else {
         refs.nextBTN.classList.toggle('active')
         refs.titleLvl.classList.toggle('hidden');
+        refs.divTwoBtn.classList.toggle('hidden');
         refs.content.classList.remove('good', 'bed');
         if(refs.nextBTN.classList.length>0){
             refs.nextBTN.value = 'Спочатку'
@@ -130,16 +152,16 @@ let width;
 
 function init(){
     width = document.querySelector('.slider').offsetWidth;
-    sliderLine.style.width = width * images.length + 'px';
+    sliderLine.style.width = width * images.length + "px";
     images.forEach(item => {
-        item.style.width = width+'px';
-        item.style.height = 'auto';
+        item.style.width = width+"px";
+        item.style.height = "auto";
     })
     rollSlider();
 }
 
 window.addEventListener('resize', init);
-init();
+
 
 document.querySelector('.slider-next').addEventListener('click', function (){
     count++;
@@ -158,5 +180,5 @@ document.querySelector('.slider-prev').addEventListener('click', function (){
 })
 
 function rollSlider(){
-    sliderLine.style.transform = 'translate(-'+count*width+'px)'
+    sliderLine.style.transform = "translate(-"+count*width+"px)"
 }

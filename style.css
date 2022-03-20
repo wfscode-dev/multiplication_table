@@ -53,6 +53,10 @@ body{
         font-size: 30px;
     }
 
+    #repBTN{
+        font-size: 30px;
+    }
+
     .form_radio_btn{
         margin: 15px;
     }
@@ -75,6 +79,18 @@ body{
     justify-content: center;
 }
 
+#repBTN{
+    width: 240px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: center;
+    background-color: aquamarine;
+    font-size: 40px;
+}
+
 #nextBTN{
     width: 200px;
     margin-top: 20px;
@@ -87,6 +103,9 @@ body{
     font-size: 40px;
 }
 
+#repBTN:hover{
+    background-color: cyan;
+}
 
 #nextBTN:hover{
     background-color: cyan;
@@ -164,4 +183,13 @@ input{
     display: flex;
     background: orange;
     transition: all ease 1s;
+}
+
+.slider-item{
+    display: flex;
+    justify-content: center;
+}
+
+.table-helf{
+    margin: auto;
 }

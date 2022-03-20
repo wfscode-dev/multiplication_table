@@ -117,8 +117,103 @@ function nextTask (e){
 
 
     }
-    //refs.content.classList.add('base');
-    //refs.content.classList.remove('good', 'bed');
 
+
+}
+
+//slider
+
+const images = document.querySelectorAll('.slider-item');
+const sliderLine = document.querySelector('.slider-items');
+let count = 0;
+let width;
+
+function init(){
+    width = document.querySelector('.slider').offsetWidth;
+    sliderLine.style.width = width * images.length + 'px';
+    images.forEach(item => {
+        item.style.width = width+'px';
+        item.style.height = 'auto';
+    })
+    rollSlider();
+}
+
+window.addEventListener('resize', init);
+init();
+
+document.querySelector('.slider-next').addEventListener('click', function (){
+    count++;
+    if(count >= images.length){
+        count = 0;
+    }
+    rollSlider();
+})
+
+document.querySelector('.slider-prev').addEventListener('click', function (){
+    count--;
+    if(count <0 ){
+        count = images.length-1;
+    }
+    rollSlider();
+})
+
+function rollSlider(){
+    sliderLine.style.transform = 'translate(-'+count*width+'px)'
+}
+
+document.addEventListener('touchstart', handleTouchStart, false);
+
+document.addEventListener('touchmove', handleTouchMove, false);
+
+let x1 = null;
+let y1 = null;
+
+function handleTouchStart(e){
+    const firstTouch = e.touches[0];
+    x1 = firstTouch.clientX;
+    y1 = firstTouch.clientY;
+}
+
+function handleTouchMove(e){
+    if(!x1||!y1){
+        return false
+    }
+    let x2 = e.touches[0].clientX;
+    let y2 = e.touches[0].clientY;
+
+    let xDif = x2 - x1;
+    let yDif = y2 - y1;
+
+    if(Math.abs(xDif)>Math.abs(yDif)){
+        if(xDif>0){
+            count++;
+            if(count >= images.length){
+                count = 0;
+            }
+            rollSlider();
+        } else {
+            count--;
+            if(count <0 ){
+                count = images.length-1;
+            }
+            rollSlider();
+        }
+    }  else {
+        if(yDif>0){
+            count++;
+            if(count >= images.length){
+                count = 0;
+            }
+            rollSlider();
+        } else {
+            count--;
+            if(count <0 ){
+                count = images.length-1;
+            }
+            rollSlider();
+        }
+    }
+    x1 = null;
+    y1 = null;
 
 }

@@ -150,3 +150,18 @@ input{
 .form_radio_btn label:hover {
     color: #666;
 }
+
+/*------------slider---------------*/
+
+.slider{
+    border: 1px solid black;
+    max-width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-items{
+    display: flex;
+    background: orange;
+    transition: all ease 1s;
+}

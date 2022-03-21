@@ -110,7 +110,7 @@ function nextTask (e){
         let currLvl = wathLvl(refs.control);
         let randomInt = randomInteger(1,10);
         let res = currLvl*randomInt;
-        refs.area.innerHTML = "<div class='inputDiv'>"+ currLvl + '*' + randomInt + '='+"<input id='edit' type='tel' onchange='showInp(this.value, " + res + ")'/></div>";
+        refs.area.innerHTML = "<div class='inputDiv'>"+ currLvl + '·' + randomInt + '='+"<input id='edit' type='tel' onchange='showInp(this.value, " + res + ")'/></div>";
         refs.results.innerHTML = `<h3 class="restext"> Усьго: ${all}</h3> <h3 class="restext">Правильно: ${goo}</h3> <h3 class="restext">Помилився: ${bee}</h3>`;
         let el = document.getElementById('edit');
         el.focus();

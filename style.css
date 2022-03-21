@@ -84,6 +84,7 @@ body{
 
     .footer{
         font-size: 14px;
+
     }
 }
 
@@ -213,11 +214,12 @@ input{
 
 
 .footer{
+    margin-bottom: 0;
     position:fixed;
     left:0px;
     bottom:0px;
     height:25px;
     width:100%;
-    font-size: 16px;
+    font-size: 14px;
     color: #999999;
 }

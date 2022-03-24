@@ -4,193 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Таблиця множення</title>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-    />
-    <link
-    rel="stylesheet"
-    href="style.css"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="wrapper">
-<div class="content" id="content">
+    <div class="content" id="content">
         <div id="top">
-            <h1  class="head_title ">Тренуй множення</h1>
+            <h1 class="head_title">Тренуй множення</h1>
             <p class="info">Вибери рівень, натисни "Почати" та перевір свої знання таблиці множення.</p>
             <p class="info">Натисни "Повторити" щоб згадати таблицю множення.</p>
-            <p class="sub_title ">Обери рівень</p>
+            <p class="sub_title">Обери рівень</p>
         </div>
-    <div id="divBtn" >
-            <div id="hardLvl" ></div>
-
-        <input type='button' id="nextBTN" value="Почати">
-    </div>
-    <div id="divTwoBtn">
+        <div id="divBtn">
+            <div id="hardLvl"></div>
+            <input type='button' id="nextBTN" value="Почати">
+        </div>
+        <div id="divTwoBtn">
         <input type='button' id="repBTN" value="Повторити">
-    </div>
-    <div id="area">
-    </div>
-    <div id="results"></div>
-    <div id="sliderDiv">
-    <div class="slider hidden" id="slider">
-        <div class="slider-items">
-            <div class="slider-item">
-                <div class="table-helf">
-                    <p>2·1=2</p>
-                    <p>2·2=4</p>
-                    <p>2·3=6</p>
-                    <p>2·4=8</p>
-                    <p>2·5=10</p>
-                </div>
-                <div class="table-helf">
-                    <p>2·6=12</p>
-                    <p>2·7=14</p>
-                    <p>2·8=16</p>
-                    <p>2·9=18</p>
-                    <p>2·10=20</p>
-                </div>
-            </div>
-            <div class="slider-item">
-                <div class="table-helf">
-                <p>3·1=3</p>
-                <p>3·2=6</p>
-                <p>3·3=9</p>
-                <p>3·4=12</p>
-                <p>3·5=15</p>
-                </div>
-                    <div class="table-helf">
-                <p>3·6=18</p>
-                <p>3·7=21</p>
-                <p>3·8=24</p>
-                <p>3·9=27</p>
-                <p>3·10=30</p>
-                    </div>
-            </div>
-            <div class="slider-item">
-                <div class="table-helf">
-                <p>4·1=4</p>
-                <p>4·2=8</p>
-                <p>4·3=12</p>
-                <p>4·4=16</p>
-                <p>4·5=20</p>
-                </div>
-                    <div class="table-helf">
-                <p>4·6=24</p>
-                <p>4·7=28</p>
-                <p>4·8=32</p>
-                <p>4·9=36</p>
-                <p>4·10=40</p>
-                    </div>
-            </div>
-            <div class="slider-item">
-                <div class="table-helf">
-                <p>5·1=5</p>
-                <p>5·2=10</p>
-                <p>5·3=15</p>
-                <p>5·4=20</p>
-                <p>5·5=25</p>
-                </div>
-                    <div class="table-helf">
-                <p>5·6=30</p>
-                <p>5·7=35</p>
-                <p>5·8=40</p>
-                <p>5·9=45</p>
-                <p>5·10=50</p>
-                    </div>
-            </div>
-            <div class="slider-item">
-                <div class="table-helf">
-                <p>6·1=6</p>
-                <p>6·2=12</p>
-                <p>6·3=18</p>
-                <p>6·4=24</p>
-                <p>6·5=30</p>
-                </div>
-                    <div class="table-helf">
-                <p>6·6=36</p>
-                <p>6·7=42</p>
-                <p>6·8=48</p>
-                <p>6·9=54</p>
-                <p>6·10=60</p>
-                    </div>
-            </div>
-            <div class="slider-item">
-                <div class="table-helf">
-                <p>7·1=7</p>
-                <p>7·2=14</p>
-                <p>7·3=21</p>
-                <p>7·4=28</p>
-                <p>7·5=35</p>
-                </div>
-                    <div class="table-helf">
-                <p>7·6=42</p>
-                <p>7·7=49</p>
-                <p>7·8=56</p>
-                <p>7·9=63</p>
-                <p>7·10=70</p>
-                    </div>
-            </div>
-            <div class="slider-item">
-                <div class="table-helf">
-                <p>8·1=8</p>
-                <p>8·2=16</p>
-                <p>8·3=24</p>
-                <p>8·4=32</p>
-                <p>8·5=50</p>
-                </div>
-                    <div class="table-helf">
-                <p>8·6=48</p>
-                <p>8·7=56</p>
-                <p>8·8=64</p>
-                <p>8·9=72</p>
-                <p>8·10=80</p>
-                    </div>
-            </div>
-            <div class="slider-item">
-                <div class="table-helf">
-                <p>9·1=9</p>
-                <p>9·2=18</p>
-                <p>9·3=27</p>
-                <p>9·4=36</p>
-                <p>9·5=45</p>
-                </div>
-                <div class="table-helf">
-                <p>9·6=54</p>
-                <p>9·7=63</p>
-                <p>9·8=72</p>
-                <p>9·9=81</p>
-                <p>9·10=90</p>
-                </div>
-            </div>
-            <div class="slider-item">
-                <div class="table-helf">
-                <p>10·1=10</p>
-                <p>10·2=20</p>
-                <p>10·3=30</p>
-                <p>10·4=40</p>
-                <p>10·5=50</p>
-                </div>
-                    <div class="table-helf">
-                <p>10·6=60</p>
-                <p>10·7=70</p>
-                <p>10·8=80</p>
-                <p>10·9=90</p>
-                <p>10·10=100</p>
-                    </div>
-            </div>
         </div>
-    </div >
+        <div id="area"></div>
+        <div id="results"></div>
+        <div id="sliderDiv">
+            <div class="slider hidden" id="slider">
+            <div class="slider-items" id="slider-items"></div>
+        </div >
         <div id="sliderBtnDiv" class="hidden">
-        <button class="button slider-prev">Назад</button>
-        <button class="button slider-next">Далі</button>
+            <button class="button slider-prev">Назад</button>
+            <button class="button slider-next">Далі</button>
         </div>
     </div>
     <p class="footer">WFScode 2022</p>
-
-</div>
-</div>
-<script src="main.js"></script>
-</body>
+            </div>
+        </div>
+    <script src="main.js"></script>
+    </body>
 </html>

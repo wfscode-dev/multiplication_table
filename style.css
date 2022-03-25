@@ -23,7 +23,6 @@ body {
 
 article,
 aside,
-footer,
 header,
 nav,
 section {
@@ -144,11 +143,6 @@ body{
      .results{
          display: inline-block;
      }
-
-    .footer{
-        font-size: 14px;
-
-    }
 }
 
 
@@ -158,8 +152,9 @@ body{
 }
 .slider-prev,
 .slider-next{
+    border: none;
     width: 150px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     text-align: center;
     vertical-align: center;
@@ -167,8 +162,9 @@ body{
     font-size: 40px;
 }
 #repBTN{
+    border: none;
     width: 240px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     padding: 20px;
     border-radius: 20px;
     text-align: center;
@@ -178,6 +174,7 @@ body{
 }
 
 #nextBTN{
+    border: none;
     width: 200px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -191,9 +188,11 @@ body{
 
 .slider-prev:hover,
 .slider-next:hover,
-#repBTN:hover{
+#repBTN:hover,
+#nextBTN:hover{
     color: white;
     background-color: var(--main-hover-color);
+    transition: all ease 0.3s;
 }
 
 #nextBTN:hover{
@@ -230,7 +229,6 @@ input{
 /*------------slider---------------*/
 
 .slider{
-    border: 1px solid black;
     max-width: 80%;
     margin: 20px auto;
     overflow: hidden;
@@ -259,6 +257,6 @@ input{
     bottom:0px;
     height:25px;
     width:100%;
-    font-size: 14px;
+    font-size: 10px;
     color: var(--main-text-second);
 }

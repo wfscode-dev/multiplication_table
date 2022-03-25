@@ -79,12 +79,10 @@ function randomInteger(min, max, randomPrev) {
 }
 
 function showInp (inp, result){
-    refs.content.classList.remove('good', 'bed');
+
     if( inp == result){
-        refs.content.classList.add('good')
         goo +=1;
     } else {
-        refs.content.classList.add('bed')
         bee +=1
     }
     all +=1;
@@ -137,7 +135,7 @@ function nextTask (e){
         refs.nextBTN.classList.toggle('active')
         refs.titleLvl.classList.toggle('hidden');
         refs.divTwoBtn.classList.toggle('hidden');
-        refs.content.classList.remove('good', 'bed');
+
         if(refs.nextBTN.classList.length>0){
             refs.nextBTN.value = 'Спочатку'
         }else {

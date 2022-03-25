@@ -1,9 +1,9 @@
 /*var*/
 :root {
     /*colors*/
-    --main-bg-color: bisque;
-    --main-accent-color: aquamarine;
-    --main-hover-color: cyan;
+    --main-bg-color: lightgray;
+    --main-accent-color: #3bf282;
+    --main-hover-color: #22bfbf;
     /*text*/
     --main-text-second: #999999;
     --main-text-hover: #ffffff;
@@ -156,10 +156,18 @@ body{
     display: flex;
     justify-content: center;
 }
-
+.slider-prev,
+.slider-next{
+    width: 150px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: center;
+    background-color: var(--main-accent-color);
+    font-size: 40px;
+}
 #repBTN{
     width: 240px;
-    margin-top: 20px;
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 20px;
@@ -172,7 +180,7 @@ body{
 #nextBTN{
     width: 200px;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 20px;
     text-align: center;
@@ -181,11 +189,15 @@ body{
     font-size: 40px;
 }
 
+.slider-prev:hover,
+.slider-next:hover,
 #repBTN:hover{
+    color: white;
     background-color: var(--main-hover-color);
 }
 
 #nextBTN:hover{
+    color: white;
     background-color: var(--main-hover-color);
 }
 
@@ -202,6 +214,7 @@ body{
 input{
     width: 150px;
     margin-left: 5px;
+    margin-right: 5px;
     border-radius: 5px;
     font-size: 60px;
 }
@@ -225,7 +238,7 @@ input{
 
 .slider-items{
     display: flex;
-    background: orange;
+    background: var(--main-hover-color);
     transition: all ease 1s;
 }
 

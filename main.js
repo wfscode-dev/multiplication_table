@@ -1,8 +1,10 @@
 const refs = {
     titleLvl: document.getElementById('top'),
     content: document.getElementById('content'),
+    typelVL: document.getElementById('typeLvl'),
     hardLvl: document.getElementById('hardLvl'),
     control: document.getElementsByName('lvl'),
+    typecontrol: document.getElementsByName('typeLVL'),
     divBtn: document.getElementById('divBtn'),
     divTwoBtn: document.getElementById('divTwoBtn'),
 
@@ -58,6 +60,8 @@ for (let i = 2; i < 10; i++) {
     }
 }
 
+
+
 let all = 0; //всього
 let goo = 0; //правильно
 let bee = 0; //помилки
@@ -87,11 +91,19 @@ function showInp (inp, result){
     }
     all +=1;
     let currLvl = whatLevel(refs.control);
+    let currType = whatLevel(refs.typecontrol);
     let randomInt = randomInteger(1,10, randomPrev);
-    randomPrev = randomInt;
-    let res = currLvl*randomInt;
-    refs.area.innerHTML = "<div class='inputDiv'>"+ currLvl + '·' + randomInt + '='+"<input id='edit' type='tel' onchange='showInp(this.value, " + res + ")'/></div>";
-    refs.results.innerHTML = `<h3 class="restext"> Усьго: ${all}</h3> <h3 class="restext">Правильно: ${goo}</h3> <h3 class="restext">Помилився: ${bee}</h3>`;
+    randomPrev = randomInt
+    if (currType === 'multiplication'){
+        let res = currLvl*randomInt;
+        refs.area.innerHTML = "<div class='inputDiv'>"+ currLvl + '·' + randomInt + '='+"<input id='edit' type='tel' onchange='showInp(this.value, " + res + ")'/></div>";
+        refs.results.innerHTML = `<h3 class="restext"> Усьго: ${all}</h3> <h3 class="restext">Правильно: ${goo}</h3> <h3 class="restext">Помилився: ${bee}</h3>`;
+    }else {
+
+        let res = randomInt*currLvl/currLvl;
+        refs.area.innerHTML = "<div class='inputDiv'>"+ currLvl*randomInt + ':' + currLvl + '='+"<input id='edit' type='tel' onchange='showInp(this.value, " + res + ")'/></div>";
+        refs.results.innerHTML = `<h3 class="restext"> Усьго: ${all}</h3> <h3 class="restext">Правильно: ${goo}</h3> <h3 class="restext">Помилився: ${bee}</h3>`;
+    }
     let el = document.getElementById('edit');
     el.focus();
 }
@@ -118,11 +130,19 @@ function nextTask (e){
         refs.titleLvl.classList.toggle('hidden');
         refs.divTwoBtn.classList.toggle('hidden');
         let currLvl = whatLevel(refs.control);
+        let currType = whatLevel(refs.typecontrol);
         let randomInt = randomInteger(1,10, randomPrev);
         randomPrev = randomInt
-        let res = currLvl*randomInt;
-        refs.area.innerHTML = "<div class='inputDiv'>"+ currLvl + '·' + randomInt + '='+"<input id='edit' type='tel' onchange='showInp(this.value, " + res + ")'/></div>";
-        refs.results.innerHTML = `<h3 class="restext"> Усьго: ${all}</h3> <h3 class="restext">Правильно: ${goo}</h3> <h3 class="restext">Помилився: ${bee}</h3>`;
+        if (currType === 'multiplication'){
+            let res = currLvl*randomInt;
+            refs.area.innerHTML = "<div class='inputDiv'>"+ currLvl + '·' + randomInt + '='+"<input id='edit' type='tel' onchange='showInp(this.value, " + res + ")'/></div>";
+            refs.results.innerHTML = `<h3 class="restext"> Усьго: ${all}</h3> <h3 class="restext">Правильно: ${goo}</h3> <h3 class="restext">Помилився: ${bee}</h3>`;
+        }else {
+
+            let res = randomInt*currLvl/currLvl;
+            refs.area.innerHTML = "<div class='inputDiv'>"+ currLvl*randomInt + ':' + currLvl + '='+"<input id='edit' type='tel' onchange='showInp(this.value, " + res + ")'/></div>";
+            refs.results.innerHTML = `<h3 class="restext"> Усьго: ${all}</h3> <h3 class="restext">Правильно: ${goo}</h3> <h3 class="restext">Помилився: ${bee}</h3>`;
+        }
         let el = document.getElementById('edit');
         el.focus();
         if(refs.nextBTN.classList.length>0){

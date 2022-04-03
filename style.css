@@ -58,6 +58,9 @@ body{
 }
 
 /*top element*/
+#typeLvl{
+    margin-bottom: 20px;
+}
 .info{
     font-size: 16px;
     color: var(--main-text-second);
@@ -98,6 +101,9 @@ body{
 }
 
 @media screen and (max-width: 768px) {
+    #typeLvl{
+        margin-bottom: 5px;
+    }
     .info{
         font-size: 14px;
     }
@@ -133,7 +139,7 @@ body{
     }
 
     .form_radio_btn{
-        margin: 15px;
+        margin: 5px;
     }
 
      .inputDiv{

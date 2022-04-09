@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Лічба до 10</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/counting.css">
+</head>
+<body>
+<div id="wrapper">
+    <div class="content" id="content">
+        <div id="top">
+            <a href="../index.html" class="info">До головного меню</a>
+            <h1 class="head_title">Тренуй лічбу</h1>
+            <p class="info">Інфо</p>
+            <p class="info">Інфо</p>
+            <p class="sub_title">Інфо</p>
+        </div>
+        <div id="divBtn">
+            <div id="typeLvl">
+                <div class="form_radio_btn">
+                    <input type = "radio" id = "typeChoice1" name = "typeLVL" value = "3" checked>
+                    <label for="typeChoice1">до 3</label>
+                </div>
+                <div class="form_radio_btn">
+                    <input type = "radio" id = "typeChoice2" name = "typeLVL" value = "5">
+                    <label for="typeChoice2">до 5</label>
+                </div>
+                <div class="form_radio_btn">
+                    <input type = "radio" id = "typeChoice3" name = "typeLVL" value = "10">
+                    <label for="typeChoice3">до 10</label>
+                </div>
+                <div class="form_radio_btn">
+                    <input type = "radio" id = "typeChoice4" name = "typeLVL" value = "100">
+                    <label for="typeChoice4">до 100</label>
+                </div>
+            </div>
+            <input type='button' class="startBTN" id="startBTN" value="Почати">
+        </div>
+        <div id="task"></div>
+        <div id="area"></div>
+        <div id="checkBTN" class="checkBTN"></div>
+        <div id="results"></div>
+        <p class="footer">WFScode 2022</p>
+    </div>
+</div>
+<script src="../js/mein2.js"></script>
+</body>
+</html>

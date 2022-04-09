@@ -3,50 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Таблиця множення</title>
+    <title>Головна</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/home.css">
+
 </head>
 <body>
 <div id="wrapper">
     <div class="content" id="content">
-        <div id="top">
-            <h1 class="head_title">Тренуй множення</h1>
-            <p class="info">Вибери рівень, натисни "Почати" та перевір свої знання таблиці множення.</p>
-            <p class="info">Натисни "Повторити" щоб згадати таблицю множення.</p>
-            <p class="sub_title">Обери рівень</p>
+        <div class="boxer">
+            <a href="html/table.html"><div class="box">Множення</div></a>
+            <a href="html/counting.html"><div class="box">Лічба до 10</div></a>
         </div>
-        <div id="divBtn">
-            <div id="typeLvl">
-                <div class="form_radio_btn">
-                    <input type = "radio" id = "typeChoice1" name = "typeLVL" value = "multiplication" checked>
-                    <label for="typeChoice1">Множення</label>
-                </div>
-                <div class="form_radio_btn">
-                    <input type = "radio" id = "typeChoice2" name = "typeLVL" value = "division">
-                    <label for="typeChoice2">Ділення</label>
-                </div>
-            </div>
-            <div id="hardLvl"></div>
-            <input type='button' id="nextBTN" value="Почати">
-        </div>
-        <div id="divTwoBtn">
-        <input type='button' id="repBTN" value="Повторити">
-        </div>
-        <div id="area"></div>
-        <div id="results"></div>
-        <div id="sliderDiv">
-            <div class="slider hidden" id="slider">
-            <div class="slider-items" id="slider-items"></div>
-        </div >
-        <div id="sliderBtnDiv" class="hidden">
-            <button class="button slider-prev">Назад</button>
-            <button class="button slider-next">Далі</button>
-        </div>
+
     </div>
-    <p class="footer">WFScode 2022</p>
-            </div>
-        </div>
-    <script src="main.js"></script>
-    </body>
+</div>
+</body>
 </html>
